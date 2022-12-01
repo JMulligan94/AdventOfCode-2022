@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "01-CalorieCounting": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "01-CalorieCounting-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
