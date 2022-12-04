@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-CalorieCounting", "01-CalorieCounting\01-CalorieCounting.csproj", "{21F26DD9-321E-4ED7-8424-9F4B7F179E69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-CalorieCounting", "01-CalorieCounting\01-CalorieCounting.csproj", "{21F26DD9-321E-4ED7-8424-9F4B7F179E69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-RockPaperScissors", "02-RockPaperScissors\02-RockPaperScissors.csproj", "{F61D4F09-D86D-4C8E-9F5C-3968265C60E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-RucksackReorganization", "03-RucksackReorganization\03-RucksackReorganization.csproj", "{217A5BF0-A3C7-4193-91E3-6D5C22D4EAB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-CampCleanup", "04-CampCleanup\04-CampCleanup.csproj", "{99AA034C-B1A8-4C79-88B1-C9F4B5FC698F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{21F26DD9-321E-4ED7-8424-9F4B7F179E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21F26DD9-321E-4ED7-8424-9F4B7F179E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21F26DD9-321E-4ED7-8424-9F4B7F179E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61D4F09-D86D-4C8E-9F5C-3968265C60E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61D4F09-D86D-4C8E-9F5C-3968265C60E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61D4F09-D86D-4C8E-9F5C-3968265C60E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61D4F09-D86D-4C8E-9F5C-3968265C60E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217A5BF0-A3C7-4193-91E3-6D5C22D4EAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217A5BF0-A3C7-4193-91E3-6D5C22D4EAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217A5BF0-A3C7-4193-91E3-6D5C22D4EAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217A5BF0-A3C7-4193-91E3-6D5C22D4EAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99AA034C-B1A8-4C79-88B1-C9F4B5FC698F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99AA034C-B1A8-4C79-88B1-C9F4B5FC698F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99AA034C-B1A8-4C79-88B1-C9F4B5FC698F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99AA034C-B1A8-4C79-88B1-C9F4B5FC698F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "02-RockPaperScissors": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "02-RockPaperScissors-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}

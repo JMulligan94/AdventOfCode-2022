@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "04-CampCleanup": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "04-CampCleanup-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
