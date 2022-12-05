@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "05-SupplyStacks": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "05-SupplyStacks-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
