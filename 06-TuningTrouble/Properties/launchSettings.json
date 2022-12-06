@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "06-TuningTrouble": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "06-TuningTrouble-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
