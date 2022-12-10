@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "07-NoSpaceLeftOnDevice": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "07-NoSpaceLeftOnDevice-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
