@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "10-CathodeRayTube": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "10-CathodeRayTube-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    },
+    "10-CathodeRayTube-Test-B": {
+      "commandName": "Project",
+      "commandLineArgs": "testB.txt"
+    }
+  }
+}
