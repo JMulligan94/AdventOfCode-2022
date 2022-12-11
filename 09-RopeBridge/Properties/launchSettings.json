@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "09-RopeBridge": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "09-RopeBridge-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    },
+    "09-RopeBridge-Test-B": {
+      "commandName": "Project",
+      "commandLineArgs": "testB.txt"
+    }
+  }
+}
