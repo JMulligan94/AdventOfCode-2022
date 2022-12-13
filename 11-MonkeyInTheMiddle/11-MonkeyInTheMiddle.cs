@@ -11,7 +11,7 @@ namespace _11_MonkeyInTheMiddle
 			public int Id { get; init; }
 			public List<long> Items { get; init; }
 			public MonkeyOperation Operation { get; init; }
-			public int Test { get; init; }
+			public long Test { get; init; }
 			public int TrueMonkey { get; init; }
 			public int FalseMonkey { get; init; }
 		}
@@ -144,62 +144,107 @@ namespace _11_MonkeyInTheMiddle
 
 			var checkRounds = new int[] { 1, 20, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000 };
 
-			for (var roundIndex = 0; roundIndex < 20; ++roundIndex)
+			var partToRun = 2;
+
+			if (partToRun == 1)
 			{
-				//Console.WriteLine($"\n===ROUND {roundIndex+1}===");
-				for (var monkeyIndex = 0; monkeyIndex < monkeys.Count(); ++monkeyIndex)
+				for (var roundIndex = 0; roundIndex < 20; ++roundIndex)
 				{
-					var monkey = monkeys[monkeyIndex];
-					//Console.WriteLine($"Monkey {monkeyIndex}:");
-					foreach (var item in monkey.Items)
+					Console.WriteLine($"\n===ROUND {roundIndex+1}===");
+					for (var monkeyIndex = 0; monkeyIndex < monkeys.Count(); ++monkeyIndex)
 					{
-						//Console.WriteLine($"  Monkey inspects an item with worry level {item}.");
-						var itemScore = monkey.Operation(item);
-						//Console.WriteLine($"    Worry level is increased to {newLevel}.");
-
-						itemScore = (int)Math.Floor(itemScore / 3.0);
-						//Console.WriteLine($"    Monkey gets bored. Worry level divided by 3 to {itemScore}.");
-
-						var throwTo = 0;
-						if (itemScore % monkey.Test == 0)
+						var monkey = monkeys[monkeyIndex];
+						Console.WriteLine($"Monkey {monkeyIndex}:");
+						foreach (var item in monkey.Items)
 						{
-							// Is divisible - pass
-							//Console.WriteLine($"    Worry level ~is~ divisible by {monkey.Test}.");
-							throwTo = monkey.TrueMonkey;
+							Console.WriteLine($"  Monkey inspects an item with worry level {item}.");
+							var itemScore = monkey.Operation(item);
+							Console.WriteLine($"    Worry level is increased to {itemScore}.");
+
+							itemScore = (int)Math.Floor(itemScore / 3.0);
+							Console.WriteLine($"    Monkey gets bored. Worry level divided by 3 to {itemScore}.");
+
+							var throwTo = 0;
+							if (itemScore % monkey.Test == 0)
+							{
+								// Is divisible - pass
+								Console.WriteLine($"    Worry level ~is~ divisible by {monkey.Test}.");
+								throwTo = monkey.TrueMonkey;
+							}
+							else
+							{
+								// Not divisible - fail
+								Console.WriteLine($"    Worry level not divisible by {monkey.Test}.");
+								throwTo = monkey.FalseMonkey;
+							}
+							Console.WriteLine($"    Item {itemScore} thrown to monkey {throwTo}.");
+							monkeys[throwTo].Items.Add(itemScore);
 						}
-						else
-						{
-							// Not divisible - fail
-							//Console.WriteLine($"    Worry level not divisible by {monkey.Test}.");
-							throwTo = monkey.FalseMonkey;
-						}
-						//Console.WriteLine($"    Item {itemScore} thrown to monkey {throwTo}.");
-						monkeys[throwTo].Items.Add(itemScore);
+						itemsHeld[monkeyIndex] += monkey.Items.Count;
+						monkey.Items.Clear();
 					}
-					itemsHeld[monkeyIndex] += monkey.Items.Count;
-					monkey.Items.Clear();
+
+					if (checkRounds.Contains(roundIndex + 1))
+					{
+						Console.WriteLine($"\n== After round {roundIndex + 1} ==");
+						PrintMonkeyInspectionCounts(ref itemsHeld);
+					}
 				}
 
-				//Console.WriteLine();
+				Console.WriteLine("\n\n=== Part One: ===");
+				PrintMonkeyInspectionCounts(ref itemsHeld);
 
-				for (var monkeyIndex = 0; monkeyIndex < monkeys.Count(); ++monkeyIndex)
+				var orderedByActivity = itemsHeld.OrderByDescending(i => i).ToArray();
+				var monkeyBusiness = orderedByActivity[0] * orderedByActivity[1];
+				Console.WriteLine($"Monkey business score: {monkeyBusiness}");
+			}
+			else
+			{ 
+				long divisorProduct = 1;
+				foreach (var monkey in monkeys)
+					divisorProduct *= monkey.Test;
+
+				for (var roundIndex = 0; roundIndex < 10000; ++roundIndex)
 				{
-					//Console.WriteLine($"Monkey {monkeyIndex}: {string.Join(',', monkeys[monkeyIndex].Items)}");
-				}
+					for (var monkeyIndex = 0; monkeyIndex < monkeys.Count(); ++monkeyIndex)
+					{
+						var monkey = monkeys[monkeyIndex];
+						foreach (var item in monkey.Items)
+						{
+							var itemScore = monkey.Operation(item);
+							itemScore = itemScore % divisorProduct;
 
-				if (checkRounds.Contains(roundIndex + 1))
-				{
-					Console.WriteLine($"\n== After round {roundIndex+1} ==");
-					PrintMonkeyInspectionCounts(ref itemsHeld);
+							var throwTo = 0;
+							if (itemScore % monkey.Test == 0)
+							{
+								// Is divisible - pass
+								throwTo = monkey.TrueMonkey;
+							}
+							else
+							{
+								// Not divisible - fail
+								throwTo = monkey.FalseMonkey;
+							}
+							monkeys[throwTo].Items.Add(itemScore);
+						}
+						itemsHeld[monkeyIndex] += monkey.Items.Count;
+						monkey.Items.Clear();
+					}
+
+					if (checkRounds.Contains(roundIndex + 1))
+					{
+						Console.WriteLine($"\n== After round {roundIndex+1} ==");
+						PrintMonkeyInspectionCounts(ref itemsHeld);
+					}
 				}
+				Console.WriteLine("\n\n=== Part Two: ===");
+				PrintMonkeyInspectionCounts(ref itemsHeld);
+
+				var orderedByActivity = itemsHeld.OrderByDescending(i => i).ToArray();
+				var monkeyBusiness = orderedByActivity[0] * orderedByActivity[1];
+				Console.WriteLine($"Monkey business score: {monkeyBusiness}");
 			}
 
-			Console.WriteLine("\n\n=== Part One: ===");
-			PrintMonkeyInspectionCounts(ref itemsHeld);
-
-			var orderedByActivity = itemsHeld.OrderByDescending(i => i).ToArray();
-			var monkeyBusiness = orderedByActivity[0] * orderedByActivity[1];
-			Console.WriteLine($"Monkey business score: {monkeyBusiness}");
 		}
 
 		static void PrintMonkeyInspectionCounts(ref long[] itemsHeld)
