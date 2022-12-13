@@ -212,6 +212,11 @@ namespace _11_MonkeyInTheMiddle
 						foreach (var item in monkey.Items)
 						{
 							var itemScore = monkey.Operation(item);
+
+							// FOR PART TWO:
+							// Keep worry levels manageable by using the modulo with the product of all the prime numbers used for divisors for the monkeys
+							// e.g. if we had 2, 3, and 7 as our divisors, after every 42 levels (2*3*7) we can wrap around back to 0 since
+							//    0 == 42, 1 == 43, 2 == 44 etc.
 							itemScore = itemScore % divisorProduct;
 
 							var throwTo = 0;
