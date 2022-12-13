@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "11-MonkeyInTheMiddle": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "11-MonkeyInTheMiddle-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}

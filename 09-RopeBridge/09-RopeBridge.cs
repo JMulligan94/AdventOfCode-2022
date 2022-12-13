@@ -170,7 +170,7 @@ namespace _09_RopeBridge
 			for (var segmentIndex = 0; segmentIndex < rope.Length; ++segmentIndex)
 			{
 				var segment = rope[segmentIndex];
-				var segmentString;
+				string segmentString;
 				if (segmentIndex == 0)
 					segmentString = "H";
 				else if (segmentIndex == rope.Length - 1)
