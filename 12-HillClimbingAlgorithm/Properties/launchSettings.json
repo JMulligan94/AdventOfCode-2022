@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "12-HillClimbingAlgorithm": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "12-HillClimbingAlgorithm-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}

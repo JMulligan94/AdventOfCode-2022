@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10-CathodeRayTube", "10-Cat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11-MonkeyInTheMiddle", "11-MonkeyInTheMiddle\11-MonkeyInTheMiddle.csproj", "{B3E291C9-BD7B-4A97-9B23-D9CBA3DB8C80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12-HillClimbingAlgorithm", "12-HillClimbingAlgorithm\12-HillClimbingAlgorithm.csproj", "{8764AD11-B005-49CE-9E5E-5CC2ACB33475}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{B3E291C9-BD7B-4A97-9B23-D9CBA3DB8C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3E291C9-BD7B-4A97-9B23-D9CBA3DB8C80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3E291C9-BD7B-4A97-9B23-D9CBA3DB8C80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8764AD11-B005-49CE-9E5E-5CC2ACB33475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8764AD11-B005-49CE-9E5E-5CC2ACB33475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8764AD11-B005-49CE-9E5E-5CC2ACB33475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8764AD11-B005-49CE-9E5E-5CC2ACB33475}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
