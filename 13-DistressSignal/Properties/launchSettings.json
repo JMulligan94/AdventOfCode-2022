@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "13-DistressSignal": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "13-DistressSignal-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
