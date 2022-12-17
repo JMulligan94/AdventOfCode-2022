@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "15-BeaconExclusionZone": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt 2000000 4000000"
+    },
+    "15-BeaconExclusionZone-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt 10 20"
+    }
+  }
+}

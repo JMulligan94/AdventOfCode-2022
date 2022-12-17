@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13-DistressSignal", "13-Dis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14-RegolithReservoir", "14-RegolithReservoir\14-RegolithReservoir.csproj", "{69B6C545-A9E8-4A54-92D6-BB36007E3D10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15-BeaconExclusionZone", "15-BeaconExclusionZone\15-BeaconExclusionZone.csproj", "{893F000C-5B64-4822-94D6-E0271058B563}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{69B6C545-A9E8-4A54-92D6-BB36007E3D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B6C545-A9E8-4A54-92D6-BB36007E3D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B6C545-A9E8-4A54-92D6-BB36007E3D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893F000C-5B64-4822-94D6-E0271058B563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893F000C-5B64-4822-94D6-E0271058B563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893F000C-5B64-4822-94D6-E0271058B563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893F000C-5B64-4822-94D6-E0271058B563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
