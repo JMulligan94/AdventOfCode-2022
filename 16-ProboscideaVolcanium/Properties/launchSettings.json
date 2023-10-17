@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "16-ProboscideaVolcanium": {
+      "commandName": "Project",
+      "commandLineArgs": "input.txt"
+    },
+    "16-ProboscideaVolcanium-Test": {
+      "commandName": "Project",
+      "commandLineArgs": "test.txt"
+    }
+  }
+}
